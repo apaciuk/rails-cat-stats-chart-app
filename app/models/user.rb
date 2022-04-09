@@ -21,7 +21,7 @@
 #  remember_created_at        :datetime
 #  reset_password_sent_at     :datetime
 #  reset_password_token       :string
-#  role                       :integer(4)       default("user"), not null
+#  role                       :integer(4)       default("owner"), not null
 #  sign_in_count              :integer(4)       default(0), not null
 #  unconfirmed_email          :string
 #  created_at                 :datetime         not null
@@ -38,13 +38,12 @@ class User < ApplicationRecord
          :rememberable, :validatable, :omniauthable
   # Roles, add other roles as required
   enum role: {
-    user: 0,
-    member: 1
+    owner: 0
   }, _prefix: true
 
   after_initialize :set_default_role, if: :new_record?
   def set_default_role
-    self.role ||= :user
+    self.role ||= :owner
   end
 
   # Validations, Names, Avatars
@@ -56,15 +55,15 @@ class User < ApplicationRecord
   # Notifications & Services
   has_many :notifications, as: :recipient
   has_many :services
-  # has_many :members
+  has_many :cats
 
   private
 
   # Example role set method
   def set_alt_role
     case role.to_sym
-    when :member
-      self.role = :member
+    when :owner
+      self.role = :owner
     end
   end
 end

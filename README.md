@@ -8,6 +8,7 @@
 
 * Admin as boolean flag on User model (manual - switch it in console)
 * Member and other roles as enum integer (hash) on User model (write methods as required, default sign up set as user) No 3rd party gems needed for Roles.
+* example: User.all.update :role => :owner
 
 # JS & CSS Bundling with Rollup - no webpack/webpacker
 
@@ -77,8 +78,8 @@ $ rails s
 
 $ rails action_text:install (already done here)
 
-$ rails generate administrate:install (if use default Administrate, for Admin example = in console: User.first.update :admin => true) )
-
+$ rails generate administrate:install (if use default Administrate, for Admin example = in console: User.first.update :admin => true)
+ 
 # Live reload/watch CSS
 
 $ $ yarn build:css --watch (separate terminal watch/update changes in styles)

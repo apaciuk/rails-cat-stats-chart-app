@@ -1,16 +1,21 @@
-<h1>Cats By Color</h1>
-<%= pie_chart Cat.group(:color).count %>
-<p class="lead text-center">Breakdown</p>
-<h1>Cats By Age</h1>
-<%= pie_chart Cat.group(:age).count %>
-<p class="lead text-center">Breakdown</p>
-<h1>Cats By Characteristic</h1>
-<%= pie_chart Cat.group(:characteristics).count %>
-<p class="lead text-center">Breakdown</p>
-<h1>Cats By Gender</h1>
-<%= pie_chart Cat.group(:gender).count %>
-<p class="lead text-center">Breakdown</p>
-<div id="cats">
+<div class="row mt-5">
+  <div class="col-md-12">
+    <h1>Cats By Name</h1>
+    <%= pie_chart Cat.group(:name).count %>
+    <p class="lead text-center">Breakdown</p>
+    <h1>Cats By Color</h1>
+    <%= pie_chart Cat.group(:color).count %>
+    <p class="lead text-center">Breakdown</p>
+    <h1>Cats By Age</h1>
+    <%= pie_chart Cat.group(:age).count %>
+    <p class="lead text-center">Breakdown</p>
+    <h1>Cats By Characteristic</h1>
+    <%= pie_chart Cat.group(:characteristics).count %>
+    <p class="lead text-center">Breakdown</p>
+    <h1>Cats By Gender</h1>
+    <%= pie_chart Cat.group(:gender).count %>
+    <p class="lead text-center">Breakdown</p>
+  <div id="cats">
   <% @cats.each do |cat| %>
     <%= render cat %>
     <p>
@@ -20,3 +25,5 @@
 </div>
 
 <%= link_to "New cat", new_cat_path %>
+  </div>
+</div>

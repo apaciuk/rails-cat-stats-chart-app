@@ -8,15 +8,27 @@
 #   Character.create(name: "Luke", movie: movies.first)
 #
 require 'faker'
-100.times do
-  cat = Cat.create(
-    avatar: Faker::Avatar.image,
-    name: Faker::Name.name,
-    bio: Faker::Quotes::Shakespeare.romeo_and_juliet_quote,
-    color: Faker::Color.color_name,
-    age: Faker::Number.between(from: 1, to: 10),
-    gender: Faker::Gender.binary_type,
-    characteristics: Faker::Emotion.adjective #=> "chagrined"
+
+# Nested with user
+10.times do
+  user = User.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password: 'password'
   )
-  cat.save!
+  10.times do 
+    cat = Cat.create(
+      avatar: 'https://picsum.photos/200',
+      name: Faker::Name.name,
+      bio: Faker::Quotes::Shakespeare.romeo_and_juliet_quote,
+      color: Faker::Color.color_name,
+      age: Faker::Number.between(from: 1, to: 10),
+      gender: Faker::Gender.binary_type,
+      characteristics: Faker::Emotion.adjective, #=> "chagrined",
+      owner_id: user.id
+    )
+    cat.save!
+    user.save!
+  end
 end
