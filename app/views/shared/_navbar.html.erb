@@ -7,7 +7,7 @@
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="background-color: #000000; background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);">
   <div class="container mx-auto">
-    <strong><%= link_to "Rails 7 Saas Octo", root_path, class: "navbar-brand" %></strong>
+    <strong><%= link_to "Cat Stats", root_path, class: "navbar-brand" %></strong>
     <!--Add erb if logo: <%= link_to image_tag('logo.png', :size => '100x30'), root_path, class: "navbar-brand" %> -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -18,7 +18,7 @@
       </ul>
 
       <ul class="navbar-nav">
-        <li class="nav-item"><%= link_to "What's New", announcements_path, class: "nav-link #{unread_announcements(current_user)}" %></li>
+        <li class="nav-item"><%= link_to "Cat News", announcements_path, class: "nav-link #{unread_announcements(current_user)}" %></li>
         <% if user_signed_in? %>
 
         <li class="nav-item">
@@ -43,8 +43,8 @@
           </li>
 
         <% else %>
-          <li class="nav-item"><%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "Login", new_user_session_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "Climb Up", new_user_registration_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "Mog In", new_user_session_path, class: "nav-link" %></li>
         <% end %>
       </ul>
     </div>

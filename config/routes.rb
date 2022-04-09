@@ -6,6 +6,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :cats
   namespace :admin do
     resources :users
     resources :services
@@ -21,5 +22,5 @@ Rails.application.routes.draw do
     get 'users' => 'devise/sessions#new'
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  root to: 'home#index'
+  root to: 'cats#index'
 end

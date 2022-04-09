@@ -21,6 +21,9 @@ gem 'bundle-audit'
 # Annotations in schema and routes [https://github.com/ctran/annotate_models]
 gem 'annotate'
 
+gem 'chartkick'  # Charts
+gem 'groupdate'  # Grouping dates
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 

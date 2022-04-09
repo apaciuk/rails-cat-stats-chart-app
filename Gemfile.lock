@@ -28,7 +28,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 3d88287fb1b3d6d1cf2b36fce902c5c8be7e9d2a
+  revision: cf78ba0779cb8900b880051a4f1c103639f23578
   branch: 7-0-stable
   specs:
     actioncable (7.0.2.3)
@@ -159,6 +159,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    chartkick (4.1.3)
     childprocess (4.1.0)
     chronic (0.10.2)
     coercible (1.0.0)
@@ -210,6 +211,8 @@ GEM
       activerecord (>= 4.0.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    groupdate (6.1.0)
+      activesupport (>= 5.2)
     hashie (5.0.0)
     hotwire-rails (0.1.3)
       rails (>= 6.0.0)
@@ -290,7 +293,7 @@ GEM
     minitest (5.15.0)
     momentjs-rails (2.29.1.1)
       railties (>= 3.1)
-    msgpack (1.5.0)
+    msgpack (1.5.1)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     name_of_person (1.1.1)
@@ -379,7 +382,7 @@ GEM
     rainbow (3.1.1)
     rake (13.0.6)
     redis (4.6.0)
-    regexp_parser (2.2.1)
+    regexp_parser (2.3.0)
     reline (0.3.1)
       io-console (~> 0.5)
     requestjs-rails (0.0.9)
@@ -405,7 +408,7 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
-    rubocop (1.26.1)
+    rubocop (1.27.0)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -414,7 +417,7 @@ GEM
       rubocop-ast (>= 1.16.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.16.0)
+    rubocop-ast (1.17.0)
       parser (>= 3.1.1.0)
     rubocop-performance (1.11.5)
       rubocop (>= 1.7.0, < 2.0)
@@ -516,6 +519,7 @@ DEPENDENCIES
   bundle-audit
   cable_ready
   capybara
+  chartkick
   cssbundling-rails (~> 1.0)
   debug
   devise!
@@ -525,6 +529,7 @@ DEPENDENCIES
   faker (~> 2.19)
   font-awesome-rails
   friendly_id (~> 5.4)
+  groupdate
   hotwire-rails
   image_processing (~> 1.2)
   importmap-rails

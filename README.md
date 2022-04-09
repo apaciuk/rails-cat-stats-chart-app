@@ -1,8 +1,8 @@
-# rails 7 sass jumpstart octo 
+# rails chartkick demo
 
-[https://github.com/xhostcom/rails-7-saas-jumpstart-octo.git]
+[https://github.com/xhostcom/rails-glowing--js-charts.git] 
 
-Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise & Roles, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Administrate, Hotwire, Stimulus and Action Cable/Cable Ready & Request JS. (Strada coming soon) 
+# Chart demo with Cats.
 
 ## Roles - Devise User Model ##
 
